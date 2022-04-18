@@ -1,0 +1,57 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@*user_registration*@
+@{ Layout = null;
+}
+@model CHETU_INDIA_APP.DB_Context.LoginInformationTable 
+
+
+<link href="~/css/bootstrap.min.css" rel="stylesheet" />
+
+<link href="~/css/metisMenu.min.css" rel="stylesheet" />
+<link href="~/css/startmin.css" rel="stylesheet" />
+<link href="~/css/font-awesome.min.css" rel="stylesheet" />
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+            <div class="login-panel panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Please Sign up</h3>
+                </div>
+                <div class="panel-body">
+
+                    <form asp-action="user_registration">
+                        <fieldset>
+                            <div class="form-group">
+
+                                <input asp-for="Name" class="form-control" required="required" placeholder="Name" />
+                                <span asp-validation-for="Name" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+
+                                <input asp-for="Email" class="form-control" required="required" placeholder="E-Email" />
+                                <span asp-validation-for="Email" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+
+                                <input asp-for="Password" class="form-control" required="required" placeholder="PASSWORD" type="password" />
+                                <span asp-validation-for="Password" class="text-danger"></span>
+                            </div>
+                           
+                           
+                            <div>
+                                <input type="submit" value="Submit" class="btn btn-outline-success" />
+                            </div>
+                            <a asp-controller="Home" asp-action="Index" class=" btn btn-outline-primary">Sign In</a>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

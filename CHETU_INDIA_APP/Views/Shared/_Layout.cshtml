@@ -1,0 +1,70 @@
+﻿@using Microsoft.AspNetCore.Http
+@inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - CHETU_INDIA_APP</title>
+    @*<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="~/css/site.css" />*@
+
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+
+    <link href="~/css/metisMenu.min.css" rel="stylesheet" />
+
+    <link href="~/css/timeline.css" rel="stylesheet" />
+
+    <link href="~/css/startmin.css" rel="stylesheet" />
+
+    <link href="~/css/morris.css" rel="stylesheet" />
+
+    <link href="~/css/font-awesome.min.css" rel="stylesheet" />
+
+
+
+</head>
+<body>
+    <div id="wrapper">
+
+        @if (@HttpContextAccessor.HttpContext.Session.GetString("Role") == "Admin")
+        {
+
+            <div>
+                @Html.Partial("_Addnavbar")
+
+            </div>
+
+        }
+
+        else
+        {
+           @Html.Partial("_leftnavbar")
+
+        }
+
+        @RenderBody()
+
+    </div>
+
+
+    <script src="~/js/jquery.min.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+
+    <script src="~/js/metisMenu.min.js"></script>
+
+    <script src="~/js/raphael.min.js"></script>
+
+    <script src="~/js/morris.min.js"></script>
+    <script src="~/js/morris-data.js"></script>
+
+    <script src="~/js/startmin.js"></script>
+
+
+    @*<script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+        @await RenderSectionAsync("Scripts", required: false)*@
+</body>
+</html>

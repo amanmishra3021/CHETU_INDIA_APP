@@ -1,0 +1,68 @@
+﻿
+@model CHETU_INDIA_APP.Models.empmodel
+<div id="page-wrapper">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">ADD Deatil</h1>
+            </div>
+            <!-- /.col-lg-12 -->
+        </div>
+        <!-- /.row -->
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        Basic Form Elements
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <form asp-action="add_employee" asp-controller="EMP_Host" method="post" >
+                                    <div>
+                                        <input type="hidden"asp-for="Id" />
+                                    </div>
+                                    <div clas="form-group">
+                                        <label asp-for="Name" class="custom-control-label"></label>
+                                        <input asp-for="Name" class="form-control" required="required" placeholder="Name" />
+                                        <span asp-validation-for="Name" class="text-danger"></span>
+                                    </div>
+                                    <div clas="form-group">
+                                        <label asp-for="Email" class="custom-control-label"></label>
+                                        <input asp-for="Email" class="form-control" required="required" placeholder="Email" />
+                                        <span asp-validation-for="Email" class="text-danger"></span>
+                                    </div>
+                                    <div clas="form-group">
+                                        <label asp-for="City" class="custom-control-label"></label>
+                                        <input asp-for="City" class="form-control" required="required" placeholder="City" />
+                                        <span asp-validation-for="City" class="text-danger"></span>
+                                    </div>
+                                    <div clas="form-group">
+                                        <label asp-for="Designation" class="custom-control-label"></label>
+                                        <input asp-for="Designation" class="form-control" required="required" placeholder="Designation" />
+                                        <span asp-validation-for="Designation" class="text-danger"></span>
+                                    </div>
+                                    <div clas="form-group">
+                                        <label asp-for="Mobile" class="custom-control-label"></label>
+                                        <input asp-for="Mobile" class="form-control" required="required" placeholder="Mobile" />
+                                        <span asp-validation-for="Mobile" class="text-danger"></span>
+                                    </div>
+                                    <div>
+                                        <input type="submit" value="Submit" class="btn btn-outline-secondary" />
+                                    </div>
+                                </form>
+                            </div>
+                            <!-- /.col-lg-6 (nested) -->
+                        </div>
+                        <!-- /.row (nested) -->
+                    </div>
+                    <!-- /.panel-body -->
+                </div>
+                <!-- /.panel -->
+            </div>
+            <!-- /.col-lg-12 -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container-fluid -->
+</div>
